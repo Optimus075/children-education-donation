@@ -1,0 +1,429 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background:rgb(81, 146, 225);
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #c8e6c9;
+}
+.signup a {
+    background: white;
+    color: #ff6f61;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+.signup-btn {
+    margin-left: 30px; 
+    background: white;
+    color: #ff6f61;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out, transform 0.2s;
+    border: 2px solid #ff6f61;
+}
+
+.signup a:hover {
+    background: #ffdbdb;
+    color: #ff3f31;
+    transform: scale(1.1);
+}
+.signup-btn:hover {
+    background: #45a049;
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.modal-content form label {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+
+.modal-content form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-content form button.signup-submit {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.modal-content form button.signup-submit:hover {
+    background: #45a049;
+}
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.modal-content form label {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+
+.modal-content form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+.modal-content form button.signup-submit {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.modal-content form button.signup-submit:hover {
+    background: #45a049;
+}
+
+
+.hero {
+    background: url('images/school-kids.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(1.1); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.donate-btn {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+    animation: pulse 1.5s infinite;
+}
+
+.donate-btn:hover {
+    background: #388E3C;
+}
+
+footer {
+    background-color: rgb(81, 146, 225);
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.blinking-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    margin-right: 440px;
+    margin-bottom: -33px;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+/* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: center; 
+    gap: 25px;
+    margin-top: 15px; 
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 5px; 
+    border-radius: 50%;
+    background-color: #f4f4f4; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.social-links img {
+    width: 30px;  
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2); 
+}
+
+#donationModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#donationModal .modal-content {
+    background: #fff;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+#closeDonation {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+#closeDonation:hover {
+    color: #333;
+}
+
+
+#donationModal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+#donationModal .signup-submit {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#donationModal .signup-submit:hover {
+    background: #45a049;
+}
+.modal-dialog 
+    max-width: 600px; 
+    margin: 30px auto; 
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.donation-container {
+    background: #fff;
+    padding: 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.donation-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pay-btn {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pay-btn:hover {
+    background: #218838;
+}
+
+.back-btn {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    background: #ff6f61;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    background: #e04e3d;
+}
+.reaching-hand {
+    width: 70px;     
+    height: auto;      
+    position: absolute; 
+    top: 5px;          
+    left: 15px;        
+    cursor: pointer;   
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.reaching-hand:hover {
+    transform: scale(1.2); 
+    opacity: 0.9;           
+}
+body {
+    position: relative; 
+}
+
+.poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    object-fit: cover; 
+    z-index: -1; 
+    opacity: 0.4; 
+}
+
+h1, .donate-btn {
+    position: relative; 
+    z-index: 1;
+}
+.reaching-hand {
+    position: absolute;
+   
+    transform: translateY(-20px);
+    animation: fadeInSlide 1.5s ease-out forwards;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
